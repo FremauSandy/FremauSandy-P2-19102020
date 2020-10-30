@@ -1,25 +1,29 @@
 <!DOCTYPE html>
+<html lang="en"></html>
 <html>
     <head>
-        <link rel="stylesheet" href="Reservia.css">
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/ce02317acd.js"></script>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>P2 Fremau sandy Reservia</title>
     </head>
 
 <!-- ------------------------------------------ -->
 
     <body>
-      
+       
+    <!-- Entête de  page -->
       <header>
-        <!-- Entête de  page -->
-        <p><img src="logo\Reservia.png" alt="Logo Reservia"class="Logo"width="100"height="50"></p>
+        <p><img src="logo\Reservia.png" alt="Logo Reservia"class="Logo"width="100"height="40"></p>
         
+    <!-- Navigateur site -->
         <nav>
-          <!-- Navigateur site -->
           <ul>
-            <li>Hébergements</li>
-            <li>Activités</li>
-            <li>S'Inscrire</li>
+            <li class="selection1"> <a href="#Hébergements">Hébergements</a></li>
+            <li class="selection2"> <a href="#Activités">Activités</a></li>
+            <li class="inscription" title="inscription fictive"><b>S'Inscrire</b></li>
           </ul>
         </nav>
 
@@ -30,30 +34,50 @@
 <!-- ------------------------------------------ -->
       
 
-<!-- ------------------------------------------ -->
-
-      <form action="traitement.php" method="post"></form>
-        <!-- barre de recherche hotel et activités -->
-        <input type="search"name="Trouver sa ville"id="Geolocalisation"value="Marseille,France">
-
-        <optgroup label="Filtres">
-          <option>Economique</option>
-          <option>Familial</option>
-          <option>Romantique</option>
-          <option>Animaux Autorisés</option>
-        </optgroup><br>
+  <!-- barre de recherche -->
       
- <!-- ------------------------------------------ -->
-      <!-- 1ere section -->
-      <article class="hebergements">Hébergements à Marseille</article>
+        <form class="flex-form" action="traitement.php" method="post" aria-label="formulaire">
+          <div class="input-icone">
+            <i class="fa fa-map-marker fa-lg" aria-hidden="true" ></i>
+            <input type="text">
+          </div>
+          <input type="search" class="ville"  placeholder="Entrer votre ville">
+          <input type="submit" class="envoyer" value="Rechercher">
+        </form> <br>
       
-<!-- ------------------------------------------ -->
-      <!-- 2nd section -->
-      <article class="hebergements">Les Plus Populaires</article>
-<!-- ------------------------------------------ -->
-      <!-- 3 eme section -->
-      <article class="hebergements">Activités à Marseille</article>
+      
+  <!-- Filtres -->
+  
+  <div class="filtres">
+    <p class="titre-filtres"><b>Filtres</b></p>
+     <button class="bouton"><i class="fas fa-money-bill-wave"></i><b>Economique</b></button>
     
+    <button class="bouton2"><i class="fas fa-child"></i><b>Familial</b></button>
+    
+    <button class="bouton3"><i class="fas fa-heart"></i><b>Romantique</b></button>
+    
+    <button class="bouton4"><i class="fas fa-dog"></i><b>Animaux Autorisés</b></button>
+  </div> 
+          
+        
+<br>   
+ <!-- ------------------------------------------ -->
+
+     <!-- 1ere et 2nde enveloppes --> 
+<div class="wrapper">
+    <h2 class="titre-wrapper" id="Hébergements">Hébérgements a Marseille</h2> 
+       
+      <!-- article "populaires" -->
+
+    <div class="wrapper-populaires"><h2 class="titre-wrapper">Les plus Populaires</h2></div>
+  </div>
+</div>  
+
+    <!-- 3eme enveloppe -->
+    <div class="wrapper2">
+      <h2 class="titre-wrapper"id="Activités">Activités à Marseille</h2>
+    </div>
+
 <!-- ------------------------------------------ -->
 
       <footer>
