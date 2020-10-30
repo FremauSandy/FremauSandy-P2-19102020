@@ -1,90 +1,189 @@
 body {
     font-family: Raleway ,sans-serif;
 }
+/* ----------------------------------------- */
 
 /* header */
 header {
     display: flex;
     justify-content: space-between;
 }
-
 h1 {
     font-size: large;
 }
-
 /* naviguateur */
-
-nav ul {
+ul {
     display: flex;
-
 }
-
-.headernav:active {
-    color: #0065FC;
-    border-top: 3px solid #0065FC;
-}
-
 li {
     padding: 10px 30px;
     overflow: hidden;
 }
-
-nav ul li {
-    text-align: center;
-    list-style-type: none;
-}   
-    
+li:hover {
+    color: #0065FC;
+    border-top: 3px solid #0065FC;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
 .inscription {
-    text-align: center;
     color: #0065FC;
     font-weight: 600px;
-    display: flex;
-    align-items: center;
 }
+/* ----------------------------------------- */
+
+/* formulaire */
+.flex-form{
+    display: flex;
+    flex-direction: row;
+    width: 425px;
+    height: 50px;
+}
+.input-icone{
+    position: relative;
+}
+.input-icone i{
+    position: absolute;
+    size: 20px;
+    left: 23px;
+    top: 17px;
+}
+.input-icone input[type="text"]{
+    width: 50px;
+    height: 48px;
+    background-color: #F2F2F2;
+    border: none;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.ville{
+    border: 2px solid;
+    border-color: #F2F2F2;
+} 
+.flex-form input[type="submit"] {
+    width: 135px;
+    background-color: #0065FC;
+    border: none;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+    font-size: medium;
+}
+
+/* filtres */
+
+.filtres{
+    display: flex;
+    justify-content: space-around;
+    width: 950px;
+  }
+  .titre-filtres {
+    font-size: 20px;
+  }
+  .bouton {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid #f2f2f2;
+    border-radius: 25px;
+    width: 195px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    background: white;
+  }
+  .bouton:hover,
+  .bouton2:hover,
+  .bouton3:hover,
+  .bouton4:hover{
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.30);
+    background-color:#deebff;
+  }
+  .bouton:active,
+  .bouton2:active,
+  .bouton3:active,
+  .bouton4:active{
+    border-style: none;
+    outline: 0px;
+    border: 3px solid #deebff;
+    color: #0065FC;
+   }
+  .bouton2 {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid #f2f2f2;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    background: white;
+  }
+  .bouton3 {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid #f2f2f2;
+    border-radius: 25px;
+    width: 185px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    background: white;
+  }
+  .bouton4 {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid #f2f2f2;
+    border-radius: 25px;
+    width: 240px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    background: white;
+  }
+
+/* ----------------------------------------- */
 
 /* enveloppes et articles */
-
-#conteneur {/* hebergements et populaires */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 35px;
+/* hebergements et populaires */
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
 }
-  
-.carte {
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 0 15px #9e6f6f2e;
-    height: 200px;
-    width: 250px;
-    margin: 20px;
+.wrapper-hebergements {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  width:880px;
+  height:630px;
 }
-
-#conteneur2 { /* activités */
-    display: flex;
-    margin: 35px;
-    padding: 40px ;
+.titre-wrapper{
+  margin:50px;
+  padding-top: 45px;
 }
-
-.enveloppe, .enveloppe2 {
-    background-color: #F2F2F2;
-    border-radius: 2rem;
-    padding: 40px;
-    margin: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    flex-direction: column;
+.wrapper-populaires{
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  width:420px;
+  height:630px;
+}
+.titre-wrapper {
+  margin:40px;
 }
 
-.enveloppe {
-    width: 600px;
-    height: 500px;
-}
+/* enveloppes et articles 2 */
 
-.enveloppe2 {
-    width: 600;
-    height: 500;
+.wrapper2 {
+  background: tomato;
+  width:100%;
+  height:550px;
 }
 
 /* footer */
