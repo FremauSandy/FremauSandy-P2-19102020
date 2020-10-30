@@ -1,0 +1,102 @@
+body {
+    font-family: Raleway ,sans-serif;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: large;
+}
+
+/* naviguateur */
+
+nav ul {
+    display: flex;
+
+}
+
+.headernav:active {
+    color: #0065FC;
+    border-top: 3px solid #0065FC;
+}
+
+li {
+    padding: 10px 30px;
+    overflow: hidden;
+}
+
+nav ul li {
+    text-align: center;
+    list-style-type: none;
+}   
+    
+.inscription {
+    text-align: center;
+    color: #0065FC;
+    font-weight: 600px;
+    display: flex;
+    align-items: center;
+}
+
+/* enveloppes et articles */
+
+#conteneur {/* hebergements et populaires */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px;
+}
+  
+.carte {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #9e6f6f2e;
+    height: 200px;
+    width: 250px;
+    margin: 20px;
+}
+
+#conteneur2 { /* activités */
+    display: flex;
+    margin: 35px;
+    padding: 40px ;
+}
+
+.enveloppe, .enveloppe2 {
+    background-color: #F2F2F2;
+    border-radius: 2rem;
+    padding: 40px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    flex-direction: column;
+}
+
+.enveloppe {
+    width: 600px;
+    height: 500px;
+}
+
+.enveloppe2 {
+    width: 600;
+    height: 500;
+}
+
+/* footer */
+
+footer {
+    background-color: #F2F2F2;
+    display: flex;
+    align-content: flex end;
+    width: 100%;
+}
+
+.blocfooter1, .blocfooter2, .blocfooter3 {
+    margin: 100px;
+    line-height: 30px;
+}    
