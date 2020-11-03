@@ -11,7 +11,7 @@ body {
     font-size:100%;
   }
 }
-@media screen and (max-width: 560px)
+@media screen and (max-width: 950px)
 {
   body{
     border: 2px solid orange;
@@ -115,11 +115,8 @@ a:hover{
 @media screen and (max-width: 950px){
   .filtres{
     width: 100%;
-    justify-content: flex-start;
+    align-content: space-between;
   }
-    .searchFiltersTitle {
-      width: 100%;
-    }
 }
 /* --------------bouttons----------------- */
 .bouton-filtre {
@@ -244,8 +241,14 @@ a:hover{
     flex-direction: column-reverse;
     justify-content:space-between;
     padding-bottom: 40px;
-    border-style: none;
+    border-radius: 0;
   }
+}
+@media screen and (max-width: 950px){
+  .wrapper{
+    background-color: transparent;
+  }
+  
 }
 /* --------------hebergements----------------- */
 .wrapper-hebergements {
@@ -349,14 +352,32 @@ a:hover{
     grid-template-columns:300px 300px 300px ;
     grid-template-rows: 90px auto 50px;
     height: auto;
-    border-radius: 0;
     justify-content: space-evenly;
   }
   .titre-populaire{
     grid-column-start: span 3;
   }
 }
+@media screen and (max-width: 950px){
+  .wrapper-populaires{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    border-radius: 0;
+  }
+  .titre-populaire{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    width: 330px;
+  }
+  .titre-populaire .icon-libre{
+    justify-content: center;
+  }
 
+}
 /* --------------cartes populaires----------------- */
 .carte-populaire {
   display: flex;
@@ -365,7 +386,6 @@ a:hover{
   width: 345px;
   height: 145px;
   background-color: white;
-  cursor: pointer;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
 }
 @media screen and (max-width: 1200px){
@@ -383,6 +403,39 @@ a:hover{
     line-height: normal;
   }
   .star{
+  }
+}
+@media screen and (max-width:950px){
+  .carte-populaire{
+    background-color: white;
+    width:400px;
+    height: 145px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
+    margin: 20px;
+  }
+  .images-populaires{
+    object-fit:cover;
+    display: block;
+    width: 300px;
+    height: 115px;
+    border-radius: 15px 15px 0 0;
+    background:#0065FC;
+  }
+  .infos-carte-populaire{
+    justify-content: center;
+    margin: 10px;
+    width: 100%;
+    height: auto;
+  }
+  .texte-annexe{
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  .star{
+
+    justify-content: flex-end;
   }
 }
 /*---------------- images cartes populaires----------------------- */
@@ -428,7 +481,12 @@ a:hover{
     justify-content: center;
   }
 }
-
+@media screen and (max-width:950px){
+  .wrapper2{
+    height: auto;
+    padding-bottom: 100px;
+  }
+}
 /* --------------cartes activités----------------- */
 .carte-activité{ 
   display:flex;
