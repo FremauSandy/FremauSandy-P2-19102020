@@ -27,7 +27,6 @@
           </ul>
         </nav>
         
-        
     </header>
 
     <h1>Trouver votre hébérgement pour des vacances de rêves</h1>
@@ -49,49 +48,55 @@
 
   <!-- Filtres -->
   
-  <div class="filtres">
+  <form class="filtres">
     <p class="titre-filtres"><b>Filtres</b></p>
+
     <!-- 1er bouton -->
-     <a href="#"><button class="bouton-filtre">
-      <div class="bouton-filtre-icon">
-        <i class="fas fa-money-bill-wave"></i>
-      </div>
-      <p class="texte-filtre"><b>Economique</b></p>
-      </button></a>
+      <label class="check-filtre">
+        <div class="bouton-filtre-icon">
+          <i class="fas fa-money-bill-wave"></i>
+        </div>
+        <input type="checkbox"  aria-label="Economique">
+        <div class="nom-filtre"> Economique</div>
+      </label>
+    
     <!-- 2nd bouton -->
-    <a href="#"><button class="bouton-filtre-familial">
-        <div class="bouton-filtre-icon">
-          <i class="fas fa-child"></i>
-        </div>  
-        <p class="texte-filtre"><b>Familial</b></p>
-      </button></a>
+    <label class="check-filtre">
+      <div class="bouton-filtre-icon">
+        <i class="fas fa-child"></i>
+      </div>
+      <input type="checkbox"  aria-label="Economique">
+      <div class="nom-filtre"> Familial</div>
+    </label>
     <!-- 3eme bouton -->
-    <a href="#"><button class="bouton-filtre-romance">
-        <div class="bouton-filtre-icon">
-          <i class="fas fa-heart"></i>
-        </div>
-        <p class="texte-filtre"><b>Romantique</b></p>
-      </button></a>
+    <label class="check-filtre">
+      <div class="bouton-filtre-icon">
+        <i class="fas fa-heart"></i>
+      </div>
+      <input type="checkbox"  aria-label="Economique">
+      <div class="nom-filtre"> Romantique</div>
+    </label>
     <!-- 4eme bouton -->
-    <a href="#"></a><button class="bouton-filtre-animal">
-        <div class="bouton-filtre-icon">
-          <i class="fas fa-dog"></i>
-        </div>
-        <p class="texte-filtre"><b>Animaux Autorisés</b></p>
-      </button></a>
-  </div>  
-<br>  
-  <div class="texte-annexe">
+    <label class="check-filtre">
+      <div class="bouton-filtre-icon">
+        <i class="fas fa-dog"></i>
+      </div>
+      <input type="checkbox"  aria-label="Economique">
+      <div class="nom-filtre"> Animaux autorisés</div>
+    </label>
+  </form>
+<br>
+  <div class="texte-info">
     <div class="icone-annexe"><i class="fas fa-info"></i></div>
     <p>Plus de 500 logements sont disponibles dans cette ville</p>
-  </div>       
-<br>   
+  </div>  
+<br> 
  <!-- ------------------------------------------ -->
      
   <div class="wrapper">
     <!-- 1ere enveloppe -->
     <div class="wrapper-hebergements">
-      <h2 class="titre-hebergement">Hébergements à Marseille</h2>
+      <h2 class="titre-hebergement"id="Hébergements">Hébergements à Marseille</h2>
         <!-- carte 1 -->
         </a><article class="carte"><a href="#">
           <img class="images-hebergements" src="images\hebergements\4_small\marcus-loke-WQJvWU_HZFo-unsplash.jpg">
@@ -190,7 +195,8 @@
           <article class="carte-populaire"><a href="#">
             <img class="images-populaires" src="images\hebergements\4_small\emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
               <div class="infos-carte-populaire">
-                <div class="texte-carte-populaire"><b>Hôtel Le Soleil du matin</b><br><div class="texte-annexe">Nuit a partir de 126€</div>
+                <div class="texte-carte-populaire"><b>Hôtel Le Soleil du matin</b>
+                  <div class="texte-annexe">Nuit a partir de 126€</div>
                 </div>
                   <div class="star">
                   <i class="fas fa-star"></i>
@@ -205,7 +211,8 @@
           <article class="carte-populaire"><a href="#">
             <img class="images-populaires" src="images\hebergements\4_small\aw-creative-VGs8z60yT2c-unsplash.jpg">
               <div class="infos-carte-populaire">
-                <div class="texte-carte-populaire"><b>Au coeur de l'Eau<br>Chambre d'Hôtes</b><br><div class="texte-annexe">Nuit a partir de 71€</div>
+                <div class="texte-carte-populaire"><b>Au coeur de l'Eau<br>Chambre d'Hôtes</b>
+                  <div class="texte-annexe">Nuit a partir de 71€</div>
                 </div>
                   <div class="star">
                   <i class="fas fa-star"></i>
@@ -220,7 +227,8 @@
           <article class="carte-populaire"><a href="#">
             <img class="images-populaires" src="images\hebergements\4_small\febrian-zakaria-sjvU0THccQA-unsplash.jpg">
               <div class="infos-carte-populaire">
-                <div class="texte-carte-populaire"><b>Hôtel Tout bleu et Blanc</b><br><div class="texte-annexe">Nuit a partir de 68€</div>
+                <div class="texte-carte-populaire"><b>Hôtel Tout bleu et Blanc</b>
+                  <div class="texte-annexe">Nuit a partir de 68€</div>
                 </div>
                   <div class="star">
                   <i class="fas fa-star"></i>
