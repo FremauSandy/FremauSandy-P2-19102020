@@ -5,62 +5,63 @@ body {
     max-width: 1440px;
     margin: auto;
 }
-@media screen and (max-width: 1360px)
+@media screen and (max-width: 1375px)
 {
   body{
     flex-direction: column;
     font-size:100%;
   }
 }
+main{
+  padding: 0 50px 0 50px;
+}
 /* -----------------------------------------------------HEADER----------------------------------------------------------------------- */
 header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .logo {
-  margin-top: 50px;
+margin-top: 50px;
 }
 h1 {
-    font-size: large;
+  font-size: large;
 }
 
 /*-------------------------------------------------------NAVIGUATEUR----------------------------------------------------------------- */
-nav{
-  margin-right: 70px;
+.menu{
+  display: flex;
 }
 ul {
-  display: flex;
+display: flex;
+margin: 0;
 }
 li {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  border:2px solid transparent;
-  padding:30px;
-  overflow: hidden;
-  
+display: flex;
+border:2px solid transparent;
+padding: 60px 30px 0 30px;
+overflow: hidden;
 }
-li:hover {
-  border-top: 2px solid #0065FC;
-}
+/* --lien d'inscription-- */
 a {
-  text-decoration: none;
-  color: black
-}
-a:hover{
-  color: #0065FC;
+text-decoration: none;
+color: black
 }
 .inscription{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 30px;
+display: flex;
+align-items: center;
+padding: 50px 30px 0 30px;
 }
 .inscription-fictive {
-  color: #0065FC;
+color: #0065FC;
+}
+/* --hover nav-- */
+li:hover {
+  border-top: 2px solid #0065FC;
+  }
+a:hover{
+color: #0065FC;
 }
 /*--------------------------------------------------------- FORM RECHERCHE----------------------------------------------------------- */
-
 .flex-form {
   display: flex;
   flex-direction: row;
@@ -71,7 +72,7 @@ a:hover{
   border: 2px solid;
   border-color: #F2F2F2;
 } 
-.flex-form input[type="submit"] {
+.flex-form input[type="submit"]{
   width: 135px;
   background-color: #0065FC;
   border: none;
@@ -82,20 +83,20 @@ a:hover{
   font-weight: bold;
   letter-spacing: 1px;
 }
-/* --------------icon geoposition----------------- */
-.icone-marker {
+/* --icon geoposition-- */
+.icone-marker{
   font-size: 16px;
-  background-color:  #f2f2f2;
+  background-color: #f2f2f2;
   width: 50px;
   height: 50px;
   border-radius: 15px 0 0 15px;
 }
-.icone-marker .fa-map-marker {
+.icone-marker .fa-map-marker{
   font-size: 18px;
   margin-left: 22px;
   margin-top: 20px;
 }
-/* -----------------------------------------------------FILTRES !!verifier active !!------------------------------------------------- */
+/* --------------------------------------------------------FILTRES----------------------------------------------------------------- */
 .filtres {
   display: flex;
   flex-wrap: wrap;
@@ -134,20 +135,16 @@ input[type="checkbox"]{
 .bouton-filtre-icon .fa-money-bill-wave{
   color: #0065FC;
 }
-/* --------------hover et active boutton----------------- */
+/* --hover et active boutton-- */
 .check-filtre:hover{
   background-color: #0065FC;
-}
-.check-filtre .nom-filtre:hover{
   color: white;
 }
 .check-filtre:active{
   flex-direction: row-reverse;
+  margin-left: 25px; /* -souci active et placement texte-- */   
 }
-.check-filtre .nom-filtre:active{
-  margin-left: 25px;
-}
- /* --------------icones boutton----------------- */   
+ /* --icones boutton-- */   
 .bouton-filtre-icon {
   display: flex;
   justify-content: center;
@@ -158,8 +155,7 @@ input[type="checkbox"]{
   border: 2px solid #deebff;
   border-radius: 100%;  
 }
-
-/* --------------annexe----------------- */
+/* --annexe-- */
 .texte-info{
   display:flex;
   flex-direction: row;
@@ -179,70 +175,78 @@ input[type="checkbox"]{
   vertical-align: middle;
   margin-left: 9px;
 }
-
 /*----------------------------------------------------------- WRAPPER----------------------------------------------------------------- */
 .wrapper {
   display: flex;
-  width:100%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
   margin-bottom: 60px;
 }
-@media screen and (max-width:1360px)
+@media screen and (max-width:1455px)
 {
   .wrapper{
     background-color:#f2f2f2;
     border-radius: 20px;
   }
 }
-@media screen and (max-width: 1320px){
+@media screen and (max-width: 1425px){
   .wrapper{
     flex-direction: column-reverse;
     justify-content:space-between;
     padding-bottom: 40px;
     border-radius: 0;
     background-color: transparent;
+    margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 10px){
   .wrapper{
     background-color: transparent;
   }
-
 }
-/* --------------hebergements ----------------- */
+/* ---------------------------------------------WRAPPER HEBERGEMENTS -------------------------------------------------------------- */
 .wrapper-hebergements {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  width: 100%;
   border-radius: 15px;
-  width:880px;
   background-color: #f2f2f2;
-  padding: 30px;
-  margin-right: 40px;
+  padding: 25px;
+  margin-right: 30px;
 }  
-@media screen and (max-width: 1360px){
+@media screen and (max-width: 1455px){
   .wrapper-hebergements{ 
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
   }
 }
-@media screen and (max-width: 10px){
+@media screen and (max-width: 1425px){
   .wrapper-hebergements{
     justify-content: center;
+    padding: 0;
   }
 }
-.titre-hebergement {
-  width: 100%;
-  margin-left:15px
+@media screen and (max-width: 10px){
+  .wrapper-hebergements{
+    flex-direction: column;
+  }
 }
-.more {
+/* --titre et infos hebergement-- */
+.titre-hebergement{
+  width: 100%;
+  padding-left: 15px;
+}
+.more{
   display: flex;
   align-items: flex-end;
   font-size: 16px;
   width: 100%;
   margin: 20px 0 0 30px;
 }
-/* --------------cartes hebergements----------------- */
+/* --cartes hebergements-- */
 .carte {
   display:flex;
   flex-direction:column;
@@ -255,26 +259,26 @@ input[type="checkbox"]{
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
   margin: 15px;
 }
-@media screen and (max-width: 10px){
+@media screen and (max-width: 1425px){
   .carte{
-    width: 335px;
-    height:200px;
+    width: 330px;
+    height: 200px;
   }
 }
-/* --------------images hebergements----------------- */
+/* --images hebergements-- */
  .images-hebergements {
   object-fit:cover;
   width: 240px;
   height: 115px;
   border-radius: 15px 15px 0 0;
 }
-@media screen and (max-width: 10px){
+@media screen and (max-width: 1425px){
   .images-hebergements{
-    width: 325px;
+    width: 320px;
     height: 115px;
   }
 }
-/* --------------texte carte hebergement----------------- */
+/* --texte carte hebergement-- */
 .infos-carte{
   width: 100%;
   margin: 10px 0 0 30px;
@@ -288,7 +292,7 @@ input[type="checkbox"]{
   font-size: 14px;
   margin: 5px 0 30px 0;
 }
-/* --------------icones etoile----------------- */
+/* --icones etoile-- */
 .star {
   display: flex;
   font-size: 12px;
@@ -297,7 +301,7 @@ input[type="checkbox"]{
 .fa-star.empty {
   color:#f2f2f2;
 }
-/* --------------aside populaire----------------- */
+/* ----------------------------------------------------ASIDE POPULAIRE------------------------------------------------------------ */
 .wrapper-populaires {
   display: flex;
   flex-direction: column;
@@ -306,17 +310,16 @@ input[type="checkbox"]{
   border-radius: 20px;
   background-color: #f2f2f2;
 }
-@media screen and (max-width: 1320px){
+@media screen and (max-width: 1425px){
   .wrapper-populaires{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin-top: 40px;
     padding-bottom: 20px;
     width: 100%;
-    border-radius: 0px;
   }
 }
+/* --titres populaires-- */
 .titre-populaire {
   display: flex;
   justify-content: space-between;
@@ -324,13 +327,18 @@ input[type="checkbox"]{
   width: 345px;
   margin-top: 50px;
 }
-@media screen and (max-width: 1320px){
+@media screen and (max-width: 1425px){
   .titre-populaire{
     width: 100%;
-    margin: 40px 95px 20px 95px;
+    margin: 40px 95px 20px 65px;
   }
 }
-/* --------------cartes populaires alleger code et voir flexbox !!----------------- */
+@media screen and (max-width:1415px){
+  .titre-populaire{
+    margin:40px 45px 20px 30px;
+  }
+}
+/* --cartes populaires -- */
 .carte-populaire {
   display: flex;
   border-radius: 15px;
@@ -338,15 +346,20 @@ input[type="checkbox"]{
   height: 145px;
   background-color: white;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
-  margin: 15px;
+  margin: 0 35px 30px 35px;
 }
-@media screen and (max-width: 1140px){
+@media screen and (max-width: 1365px){
   .carte-populaire{
     width: 335px;
     height: 145px;
   }
 }
-/*---------------- images cartes populaires----------------------- */
+@media screen and (max-width:1332px){
+  .carte-populaire{
+    margin-left: 0;
+  }
+}
+/*-- images cartes populaires-- */
 .images-populaires {
   object-fit:cover;
   background:#0065FC;
@@ -363,7 +376,6 @@ input[type="checkbox"]{
   height: 120px;
   line-height: 20px;
 }
-
 /* ---------------------------------------------------------WRAPPER2----------------------------------------------------------------- */
 .wrapper2 {/* regler width */
   display:grid;
@@ -371,15 +383,22 @@ input[type="checkbox"]{
   grid-template-rows:240px 240px;
   grid-row-gap: 40px;
 }
-@media screen and (max-width: 1360px){  /* --------------cartes activités a changer---------------- */
+@media screen and (max-width: 1425px){
   .wrapper2{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    height: auto;
+    justify-content: space-around;
+    margin-bottom: 50px;
   }
 }
-/* --------------cartes activités alleger le code! ---------------- */
+.titre-wrapper2{
+  margin-top: 0;
+}
+/* --cartes activités-- */
+.carte-activité-small,
+.carte-activité-médium-3,
+.carte-activité-médium-2,
+.carte-activité-alternative,
 .carte-activité{ 
   display:flex;
   flex-direction:column;
@@ -388,44 +407,37 @@ input[type="checkbox"]{
   height:450px;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
 }
-
-.carte-activité-alternative{ 
-  display:flex;
-  flex-direction:column;
-  border-radius:15px;
-  width:300px;
+.carte-activité-alternative{
   height:240px;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
 }
+.carte-activité-médium-3,
 .carte-activité-médium-2 {
-  display:flex;
-  flex-direction:column;
-  border-radius:15px;
-  width:300px;
   height:210px;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
 }
 .carte-activité-médium-3 { 
-  display:flex;
-  flex-direction:column;
-  border-radius:15px;
-  width:300px;
-  height:210px;
   margin-top:-40px;
   grid-column: 4 ;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
 }
 .carte-activité-small { 
-  display:flex;
-  flex-direction:column;
-  border-radius:15px;
-  width: 300px;
   height: 170px;
   grid-row-start:2;
   grid-column-start:2;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
 }
-/*---------------- hover cartes activités----------------------- */
+@media screen and (max-width: 1425px){
+  .carte-activité-small,
+  .carte-activité-médium-3,
+  .carte-activité-médium-2,
+  .carte-activité-alternative,
+ .carte-activité{
+  width: 335px;
+  height: 200px;
+  align-items: center;
+  }
+  .carte-activité-médium-3{
+    margin-top: auto;
+  }
+}
+/*-- hover cartes activités-- */
 .carte-activité-small:hover,
 .carte-activité-médium-3:hover,
 .carte-activité-médium-2:hover,
@@ -435,36 +447,35 @@ input[type="checkbox"]{
 .carte:hover {
   box-shadow: 1px 2px 5px 1px #deebff
  }
-/*---------------- images cartes activités !!alleger le code!----------------------- */
+/*-- images cartes activités !!-- */
+.images-activités-small,
+.images-activités-médium,
+.images-activités-alternative,
 .images-activités {
   object-fit:cover;
   border-radius: 15px 15px 0 0;
-  background:#0065FC;
   width:300px;
   height:400px;
 }
 .images-activités-alternative {
-  object-fit:cover;
-  border-radius: 15px 15px 0 0;
-  background:#0065FC;
-  width:300px;
   height:180px;
 }
 .images-activités-médium {
-  object-fit:cover;
-  border-radius: 15px 15px 0 0;
-  background:#0065FC;
-  width:300px;
   height:150px;
 }
 .images-activités-small {
-  object-fit:cover;
-  border-radius: 15px 15px 0 0;
-  background:#0065FC;
-  width:300px;
   height:120px;
 }
-/* ---------------texte-------------- */
+@media screen and (max-width: 1425px){
+  .images-activités-small,
+  .images-activités-médium,
+  .images-activités-alternative,
+  .images-activités{
+    width: 325px;
+    height: 135px;
+  }
+}
+/* --texte-- */
 .texte-carte-nom {
   margin-left: 20px;
 }
@@ -472,23 +483,27 @@ input[type="checkbox"]{
   margin-left: 20px;
   margin-top: 25px;
 }
-
 /* -----------------------------------------FOOTER verfifie margin wrapper activité en responsive-------------------------------------- */
-
-footer {
+footer{
   background-color: #F2F2F2;
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  justify-content: space-around;
   width: 100%;
 } 
 .blocfooter{
-  margin: 20px;
   line-height: 30px;
-
+  margin: 30px 230px 0 50px;
 }
-@media screen and (max-width: 1200px){ 
-  .footer{
-    display: flex;
-    flex-wrap: wrap;
+@media screen and(max-width:1200px){
+ .footer{
+  flex-wrap: wrap;
+ }
+}
+@media screen and (max-width:10px){ 
+  footer{
+    flex-direction: column;
+  }
+  .blocfooter{
+    display: block;
   }
 }
