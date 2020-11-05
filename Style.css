@@ -1,24 +1,18 @@
-/* --------------color infos: light grey:#f2f2f2; blue:#0065fc ; lightblue:#deebff ----------------- */
+/* -------------------------color infos: light grey:#f2f2f2; blue:#0065fc ; lightblue:#deebff -------------------------------------- */
+/* -------------------------responsive breakpoint 1200px- 950px- ... -------------------------------------- */
 body {
     font-family: Raleway ,sans-serif;
     max-width: 1440px;
     margin: auto;
 }
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 1360px)
 {
   body{
     flex-direction: column;
     font-size:100%;
   }
 }
-@media screen and (max-width: 950px)
-{
-  body{
-    border: 2px solid orange;
-    margin: auto;
-  }
-}
-/* --------------header----------------- */
+/* -----------------------------------------------------HEADER----------------------------------------------------------------------- */
 header {
     display: flex;
     justify-content: space-between;
@@ -30,8 +24,10 @@ h1 {
     font-size: large;
 }
 
-/*-------------------------------- naviguateur---------------------------- */
-
+/*-------------------------------------------------------NAVIGUATEUR----------------------------------------------------------------- */
+nav{
+  margin-right: 70px;
+}
 ul {
   display: flex;
 }
@@ -63,7 +59,7 @@ a:hover{
 .inscription-fictive {
   color: #0065FC;
 }
-/*-------------------------------- formulaire de recherche---------------------------- */
+/*--------------------------------------------------------- FORM RECHERCHE----------------------------------------------------------- */
 
 .flex-form {
   display: flex;
@@ -92,22 +88,20 @@ a:hover{
   background-color:  #f2f2f2;
   width: 50px;
   height: 50px;
-  border-radius: 20px 0 0 20px;
+  border-radius: 15px 0 0 15px;
 }
 .icone-marker .fa-map-marker {
   font-size: 18px;
   margin-left: 22px;
   margin-top: 20px;
 }
-
-/*-------------------------------- filtres---------------------------- */
-
+/* -----------------------------------------------------FILTRES !!verifier active !!------------------------------------------------- */
 .filtres {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  width: 950px;
+  width: 100%;
+  margin-left: 15px;
 }
 .titre-filtres {
   font-size: 20px;
@@ -118,96 +112,60 @@ a:hover{
     align-content: space-between;
   }
 }
-/* --------------bouttons----------------- */
-.bouton-filtre {
-  display:flex;
+.check-filtre{
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  border: 3px solid #f2f2f2;
+  justify-content: space-between;
   border-radius: 50px;
-  width: 195px;
-  height: 50px;
-  font-size: 16px;
-  background: white;
-  }
-.bouton-filtre-familial {
-  display:flex;
-  align-items: center;
-  justify-content: space-around;
   border: 3px solid #f2f2f2;
-  border-radius: 50px;
-  width: 150px;
   height: 50px;
-  font-size: 16px;
-  background: white;
-}  
-.bouton-filtre-romance {
-  display:flex;
-  align-items: center;
-  justify-content: space-around;
-  border: 3px solid #f2f2f2;
-  border-radius: 50px;
-  width: 185px;
-  height: 50px;
-  font-size: 16px;
-  background: white;
+  margin-left: 25px;
 }
-.bouton-filtre-animal {
-  display:flex;
-  align-items: center;
-  justify-content: space-around;
-  border: 3px solid #f2f2f2;
-  border-radius: 50px;
-  width: 245px;
-  height: 50px;
-  font-size: 16px;
-  background: white;
- }      
- /* --------------icones boutton----------------- */   
-.bouton-filtre-icon {
-  background-color:#deebff;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  margin-left: -22px;
+input[type="checkbox"]{
+  visibility: hidden;
+}
+.nom-filtre{
+  margin-right: 25px ;
 }
 .bouton-filtre-icon .fa-dog,
 .bouton-filtre-icon .fa-heart,
 .bouton-filtre-icon .fa-child,
 .bouton-filtre-icon .fa-money-bill-wave{
-  font-size: 16px;
-  margin-top: 16px;
   color: #0065FC;
 }
 /* --------------hover et active boutton----------------- */
-.bouton-filtre-animal:hover,
-.bouton-filtre-romance:hover,
-.bouton-filtre-familial:hover,
-.bouton-filtre:hover {
-  font-size: 18px;
-  background-color: #deebff;
-  border: none;
+.check-filtre:hover{
+  background-color: #0065FC;
 }
-.bouton-filtre-animal:active,
-.bouton-filtre-romance:active,
-.bouton-filtre-familial:active,
-.bouton-filtre:active {
-  background-color: #deebff;
-  color: #0065FC;
-  border: none;
+.check-filtre .nom-filtre:hover{
+  color: white;
 }
-/* --------------texte boutton----------------- */
-.texte-filtre {
+.check-filtre:active{
+  flex-direction: row-reverse;
+}
+.check-filtre .nom-filtre:active{
+  margin-left: 25px;
+}
+ /* --------------icones boutton----------------- */   
+.bouton-filtre-icon {
   display: flex;
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
+  background-color:#deebff;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #deebff;
+  border-radius: 100%;  
 }
+
 /* --------------annexe----------------- */
-.texte-annexe {
+.texte-info{
   display:flex;
   flex-direction: row;
+  margin-left: 15px;
 }
-.icone-annexe {
-    
+.icone-annexe{
   border-radius: 100%;
   border: 2px solid #f2f2f2;
   width: 21px;
@@ -215,66 +173,74 @@ a:hover{
   margin-top: 12px;
   margin-right: 10px;
 }
-.texte-annexe i.fa-info {
+.texte-info i.fa-info {
   color: #0065FC;
   font-size: 12px;
   vertical-align: middle;
   margin-left: 9px;
 }
 
-/*-------------------------------- wrapper hebergements et populaires---------------------------- */
-
+/*----------------------------------------------------------- WRAPPER----------------------------------------------------------------- */
 .wrapper {
   display: flex;
-  justify-content: space-around;
   width:100%;
+  margin-bottom: 60px;
 }
-@media screen and (max-width:1300px)
+@media screen and (max-width:1360px)
 {
   .wrapper{
     background-color:#f2f2f2;
     border-radius: 20px;
   }
 }
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1320px){
   .wrapper{
     flex-direction: column-reverse;
     justify-content:space-between;
     padding-bottom: 40px;
     border-radius: 0;
+    background-color: transparent;
   }
 }
-@media screen and (max-width: 950px){
+@media screen and (max-width: 10px){
   .wrapper{
     background-color: transparent;
   }
-  
+
 }
-/* --------------hebergements----------------- */
+/* --------------hebergements ----------------- */
 .wrapper-hebergements {
-  display: grid;
-  justify-content:center;
-  grid-column-gap: 30px;
-  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-radius: 15px;
   width:880px;
-  height:630px;
   background-color: #f2f2f2;
+  padding: 30px;
+  margin-right: 40px;
 }  
-@media screen and (max-width: 1200px){
-  .wrapper-hebergements{
+@media screen and (max-width: 1360px){
+  .wrapper-hebergements{ 
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-color: transparent;
+  }
+}
+@media screen and (max-width: 10px){
+  .wrapper-hebergements{
+    justify-content: center;
   }
 }
 .titre-hebergement {
-  display: flex;
-  align-items: flex-end;
-  grid-column-start:1;
-  grid-column-end: span 3;
+  width: 100%;
+  margin-left:15px
 }
 .more {
+  display: flex;
+  align-items: flex-end;
   font-size: 16px;
+  width: 100%;
+  margin: 20px 0 0 30px;
 }
 /* --------------cartes hebergements----------------- */
 .carte {
@@ -287,21 +253,31 @@ a:hover{
   height:200px;
   border-radius: 15px;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
+  margin: 15px;
+}
+@media screen and (max-width: 10px){
+  .carte{
+    width: 335px;
+    height:200px;
+  }
 }
 /* --------------images hebergements----------------- */
  .images-hebergements {
   object-fit:cover;
-  display: block;
   width: 240px;
   height: 115px;
   border-radius: 15px 15px 0 0;
-  background:#0065FC;
 }
-/* --------------texte carte hebergement et populaires----------------- */
+@media screen and (max-width: 10px){
+  .images-hebergements{
+    width: 325px;
+    height: 115px;
+  }
+}
+/* --------------texte carte hebergement----------------- */
 .infos-carte{
-  width: 210px;
-  height:90px;
-  margin-top: 10px;
+  width: 100%;
+  margin: 10px 0 0 30px;
 }
 .texte-carte {
   line-height: 20px;
@@ -310,16 +286,7 @@ a:hover{
 }
 .texte-annexe{
   font-size: 14px;
-  margin-top: 5px;
-  margin-bottom: 30px;
-}
-.infos-carte-populaire {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0 0 20px;
-  width: 150px;
-  height: 120px;
-  line-height: 20px;
+  margin: 5px 0 30px 0;
 }
 /* --------------icones etoile----------------- */
 .star {
@@ -332,110 +299,51 @@ a:hover{
 }
 /* --------------aside populaire----------------- */
 .wrapper-populaires {
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width:420px;
-  height:630px;
   border-radius: 20px;
-  grid-template-rows: 90px 175px 175px;
   background-color: #f2f2f2;
+}
+@media screen and (max-width: 1320px){
+  .wrapper-populaires{
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-radius: 0px;
+  }
 }
 .titre-populaire {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: baseline;
+  width: 345px;
+  margin-top: 50px;
 }
-@media screen and (max-width: 1200px){
-  .wrapper-populaires{
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns:300px 300px 300px ;
-    grid-template-rows: 90px auto 50px;
-    height: auto;
-    justify-content: space-evenly;
-  }
+@media screen and (max-width: 1320px){
   .titre-populaire{
-    grid-column-start: span 3;
+    width: 100%;
+    margin: 40px 95px 20px 95px;
   }
 }
-@media screen and (max-width: 950px){
-  .wrapper-populaires{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width:100%;
-    border-radius: 0;
-  }
-  .titre-populaire{
-    display: flex;
-    align-items: flex-start;
-    margin-top: 40px;
-    width: 330px;
-  }
-  .titre-populaire .icon-libre{
-    justify-content: center;
-  }
-
-}
-/* --------------cartes populaires----------------- */
+/* --------------cartes populaires alleger code et voir flexbox !!----------------- */
 .carte-populaire {
   display: flex;
-  flex-direction:row;
   border-radius: 15px;
   width: 345px;
   height: 145px;
   background-color: white;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
+  margin: 15px;
 }
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1140px){
   .carte-populaire{
-    width: 280px;
-  }
-  .infos-carte-populaire{
-    margin: auto;
-    width: 100px;
-    height: 130px;
-  }
-  .texte-annexe{
-    margin: auto;
-    font-size: small;
-    line-height: normal;
-  }
-  .star{
-  }
-}
-@media screen and (max-width:950px){
-  .carte-populaire{
-    background-color: white;
-    width:400px;
+    width: 335px;
     height: 145px;
-    border-radius: 15px;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
-    margin: 20px;
-  }
-  .images-populaires{
-    object-fit:cover;
-    display: block;
-    width: 300px;
-    height: 115px;
-    border-radius: 15px 15px 0 0;
-    background:#0065FC;
-  }
-  .infos-carte-populaire{
-    justify-content: center;
-    margin: 10px;
-    width: 100%;
-    height: auto;
-  }
-  .texte-annexe{
-    font-size: 14px;
-    margin-top: 5px;
-    margin-bottom: 30px;
-  }
-  .star{
-
-    justify-content: flex-end;
   }
 }
 /*---------------- images cartes populaires----------------------- */
@@ -447,47 +355,31 @@ a:hover{
   margin: 5px 0 0 5px;
   border-radius: 15px 0 0 15px;
 }
-/*---------------- icone libre----------------------- */
-.wrapper .fa-chart-line {
-  display:flex;
-  flex-direction:row;
-}
-.icon-libre {
+.infos-carte-populaire {
   display: flex;
-  width: 20px;
-  height: 20px;
-}
-.icon-libre .fa-chart-line {
-  margin-top: -5px;
+  flex-direction: column;
+  margin: 20px 0 0 20px;
+  width: 150px;
+  height: 120px;
+  line-height: 20px;
 }
 
-/* ---------------------------Activités---------------------------------- */
-
-.wrapper2 {
+/* ---------------------------------------------------------WRAPPER2----------------------------------------------------------------- */
+.wrapper2 {/* regler width */
   display:grid;
-  justify-content: space-around;
-  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-columns: 350px 350px 350px 350px; /* ------alleger repeat--------------- */
   grid-template-rows:240px 240px;
-  grid-column-gap: 40px;
   grid-row-gap: 40px;
-  width: 100%;
-  height: 550px;
 }
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1360px){  /* --------------cartes activités a changer---------------- */
   .wrapper2{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
-  }
-}
-@media screen and (max-width:950px){
-  .wrapper2{
+    flex-wrap: wrap;
     height: auto;
-    padding-bottom: 100px;
   }
 }
-/* --------------cartes activités----------------- */
+/* --------------cartes activités alleger le code! ---------------- */
 .carte-activité{ 
   display:flex;
   flex-direction:column;
@@ -496,6 +388,7 @@ a:hover{
   height:450px;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
 }
+
 .carte-activité-alternative{ 
   display:flex;
   flex-direction:column;
@@ -532,19 +425,6 @@ a:hover{
   grid-column-start:2;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
 }
-@media screen and (max-width:1200px){
-  .carte-activité-médium-3,
-  .carte-activité-médium-2,
-  .carte-activité-alternative,
-  .carte-activité-small,
-  .carte-activité{
-    width:300px;
-    height:210px;
-  }
-  .carte-activité-médium-3{
-    margin-top:0;
-  }
-}
 /*---------------- hover cartes activités----------------------- */
 .carte-activité-small:hover,
 .carte-activité-médium-3:hover,
@@ -555,8 +435,7 @@ a:hover{
 .carte:hover {
   box-shadow: 1px 2px 5px 1px #deebff
  }
- 
-/*---------------- images cartes activités----------------------- */
+/*---------------- images cartes activités !!alleger le code!----------------------- */
 .images-activités {
   object-fit:cover;
   border-radius: 15px 15px 0 0;
@@ -585,14 +464,6 @@ a:hover{
   width:300px;
   height:120px;
 }
-@media screen and (max-width: 1200px){
-  .images-activités-small,
-  .images-activités-médium,
-  .images-activités-alternative,
-  .images-activités{
-    height:160px;
-  }
-}
 /* ---------------texte-------------- */
 .texte-carte-nom {
   margin-left: 20px;
@@ -602,7 +473,7 @@ a:hover{
   margin-top: 25px;
 }
 
-/* -----footer------- */
+/* -----------------------------------------FOOTER verfifie margin wrapper activité en responsive-------------------------------------- */
 
 footer {
   background-color: #F2F2F2;
@@ -615,8 +486,9 @@ footer {
   line-height: 30px;
 
 }
-@media screen and (max-width: 950px){ 
+@media screen and (max-width: 1200px){ 
   .footer{
-    /* probleme de column */
+    display: flex;
+    flex-wrap: wrap;
   }
 }
