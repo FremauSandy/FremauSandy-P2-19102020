@@ -1,5 +1,5 @@
-/* -------------------------color infos: light grey:#f2f2f2; blue:#0065fc ; lightblue:#deebff ------------------------------------- */
-/* ---------------------------------------responsive breakpoint 1200px- 950px- ... ------------------------------------------------ */
+/* -------------------------color infos: light grey:#f2f2f2; blue:#0065fc ; lightblue:#deebff ----------------------------------- */
+
 body {
     font-family: Raleway ,sans-serif;
     max-width: 1440px;
@@ -9,98 +9,100 @@ body {
 main{
   padding: 0 50px 0 50px;
 }
-@media screen and (max-width:1160px){
-  main{
-    padding: 30px;
+section{
+  padding-right: 30px;
+}
+@media screen and (max-width: 700px){
+  section{
+    padding-right: 0;
   }
 }
-@media screen and (max-width: 800px){
-  main{
-    padding: 15px;
-  }
-}
-@media screen and (max-width: 600px){
-  main{
-    padding: 0;
-  }
-}
-/* -----------------------------------------------------HEADER--------------------------------------------------------------------- */
+/* ------------------------------------------HEADER---breakpoint 1430px, 1230px, 700px--------------------------------------------------- */
 header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width: 1230px){
   header{
-    width: 100%;
-    height: 130px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width:700px){
+  header{
     margin-bottom: 35px;
-    border-bottom: 3px solid #F2F2F2;
   }
 }
 .logo {
-  margin: 50px 0 40px 0;
+  margin: 50px 50% 40px 0;
 }
-/*-------------------------------------------------------NAVIGUATEUR----------------------------------------------------------------- */
-.menu{
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-@media screen and (max-width:800px){
-  menu{
-    position: relative;
-    order:3;
-    display:block;
-    justify-content:space-around;
+@media  screen and (max-width:1430px){
+  .logo{
+    margin-right: auto;
   }
 }
-ul {
-display: flex;
-margin: 0;
+@media screen and (max-width:700px){
+  .logo{
+    padding: 0;
+    margin: 30px 0 0 20px;
+  }
 }
-@media screen and (max-width:800px){
-  ul{
+/*----------------------------------------------NAVIGUATEUR---Breakpoint: 745px, 700px-------------------------------------------------- */
+.menu{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+}
+@media screen and (max-width: 745px){
+  .menu{
+    margin-left: auto;
+  }
+}
+@media screen and (max-width:700px){
+  .menu{
+    padding: 0;
     width: 100%;
-    align-items: flex-end;
+    order: 3;
+    margin: 0;
   }
 }
 li {
 display: flex;
 border-bottom: 2px solid transparent;
-padding: 60px 30px 0 30px;
+padding: 45px 30px 20px 30px;
 overflow: hidden;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:700px){
   li{
-  display: flex;
-	justify-content: center;
+    width: 100%;
+    padding: 40px 50px 20px 50px;
+    border-bottom: 3px solid  #F2F2F2;
+    justify-content: center;
   }
 }
 /* --lien d'inscription-- */
-a {
+a{
 text-decoration: none;
 color: black
 }
 .inscription{
-display: flex;
-margin: 62px 30px 0 30px;
-order:3;
+margin: 62px 0 0 30px;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:700px){
   .inscription{
-    flex-wrap: wrap;
+    margin:45px 10px 0 0;
     order: 2;
-    margin: 62px 20px 0 0;
   }
 }
-.inscription-fictive {
+.inscription-fictive{
 color: #0065FC;
 }
 /* --hover nav-- */
-li:hover {
+li:hover{
   border-top: 2px solid #0065FC;
   }
-@media screen and (max-width:800px) {
+@media screen and (max-width:700px){
   li:hover{
     border-top: none;
     border-bottom: 3px solid #0065FC ;
@@ -113,7 +115,7 @@ color: #0065FC;
 h1 {
   font-size: large;
 }
-/*--------------------------------------------------------- FORM RECHERCHE----------------------------------------------------------- */
+/*------------------------------------------------------- FORM RECHERCHE--------------------------------------------------------- */
 .flex-form {
   display: flex;
   flex-direction: row;
@@ -121,8 +123,10 @@ h1 {
   height: 50px;
 }
 @media screen and (max-width:350px){
-  .flex-form{
+  .flex-form input[type="submit"]{
     /* --changer "rechercher"-- */
+    
+    border-radius: 15px;
   }
 }
 .ville {
@@ -133,8 +137,7 @@ h1 {
   width: 135px;
   background-color: #0065FC;
   border: none;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 0 15px 15px 0 ;
   color: white;
   font-size: medium;
   font-weight: bold;
@@ -153,7 +156,7 @@ h1 {
   margin-left: 22px;
   margin-top: 20px;
 }
-/* --------------------------------------------------------FILTRES----------------------------------------------------------------- */
+/* ---------------------------------------------------------FILTRES--breakpoint: 950px, 700px------------------------------------------------------- */
 .filtres {
   display: flex;
   flex-wrap: wrap;
@@ -161,13 +164,18 @@ h1 {
   width: 100%;
   margin-left: 15px;
 }
-.titre-filtres {
-  font-size: 20px;
-}
 @media screen and (max-width: 950px){
   .filtres{
     width: 100%;
     align-content: space-between;
+  }
+}
+.titre-filtres {
+  font-size: 20px;
+}
+@media screen and (max-width: 950px){
+  .titre-filtres{
+    width: 100%;
   }
 }
 .check-filtre{
@@ -232,7 +240,7 @@ input[type="checkbox"]{
   vertical-align: middle;
   margin-left: 9px;
 }
-/*----------------------------------------------------------- WRAPPER----------------------------------------------------------------- */
+/*-------------------------------------- WRAPPER------breakpoint: 1455px ;1425px------------------------------------------------- */
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -257,12 +265,7 @@ input[type="checkbox"]{
     margin-bottom: 0px;
   }
 }
-@media screen and (max-width: 10px){
-  .wrapper{
-    background-color: transparent;
-  }
-}
-/* ---------------------------------------------WRAPPER HEBERGEMENTS -------------------------------------------------------------- */
+/* ------------------------WRAPPER HEBERGEMENTS -------breakpoint: 1455px ;1425px------------------------------------------------ */
 .wrapper-hebergements {
   display: flex;
   flex-wrap: wrap;
@@ -284,11 +287,6 @@ input[type="checkbox"]{
   .wrapper-hebergements{
     justify-content: center;
     padding: 0;
-  }
-}
-@media screen and (max-width: 10px){
-  .wrapper-hebergements{
-    flex-direction: column;
   }
 }
 /* --titre et infos hebergement-- */
@@ -358,7 +356,7 @@ input[type="checkbox"]{
 .fa-star.empty {
   color:#f2f2f2;
 }
-/* ----------------------------------------------------ASIDE POPULAIRE------------------------------------------------------------ */
+/* -----------------ASIDE POPULAIRE---breakpoint: 1425px; 1160px; 1365px; 1332px; 1230px; 1085px; 950px; 350px------------------- */
 .wrapper-populaires {
   display: flex;
   flex-direction: column;
@@ -392,11 +390,6 @@ input[type="checkbox"]{
 @media screen and (max-width: 1425px){
   .titre-populaire{
     width: 100%;
-    margin: 40px 95px 20px 65px;
-  }
-}
-@media screen and (max-width:1415px){
-  .titre-populaire{
     margin:40px 45px 20px 30px;
   }
 }
@@ -453,7 +446,7 @@ input[type="checkbox"]{
   height: 120px;
   line-height: 20px;
 }
-/* ---------------------------------------------------------WRAPPER2----------------------------------------------------------------- */
+/* ------------------------------------WRAPPER2---breakpoint: 1425px; 330px------------------------------------------------------ */
 .wrapper2 {/* regler width */
   display:grid;
   grid-template-columns: 350px 350px 350px 350px; /* ------alleger repeat--------------- */
@@ -578,7 +571,7 @@ input[type="checkbox"]{
   margin-left: 20px;
   margin-top: 25px;
 }
-/* -----------------------------------------FOOTER verfifie margin wrapper activité en responsive-------------------------------------- */
+/* -----------------------------------------FOOTER----breakpoint: 1370px; 600px-------------------------------------- */
 footer{
   background-color: #F2F2F2;
   display: flex;
