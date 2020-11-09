@@ -4,60 +4,49 @@ body {
     font-family: Raleway ,sans-serif;
     max-width: 1440px;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 /* --main-- */
 main{
   padding: 0 50px 0 50px;
+}
+@media screen and (max-width: 700px){
+  main {
+    padding: 0;
+  }
 }
 section{
   padding-right: 30px;
 }
 @media screen and (max-width: 700px){
   section{
-    padding-right: 0;
+    padding: 20px;
   }
 }
-/* ------------------------------------------HEADER---breakpoint 1430px, 1230px, 700px--------------------------------------------------- */
+/* ---------------------------------------------------HEADER---breakpoint: 700px------------------------------------------------------ */
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap ;
+  justify-content: space-between;/* --a regler!!-- */
   width: 100%;
 }
-@media screen and (max-width: 1230px){
-  header{
-    flex-wrap: wrap;
-  }
+.logo {
+  margin: 50px 50% 40px 0;
 }
 @media screen and (max-width:700px){
   header{
     margin-bottom: 35px;
   }
-}
-.logo {
-  margin: 50px 50% 40px 0;
-}
-@media  screen and (max-width:1430px){
-  .logo{
-    margin-right: auto;
-  }
-}
-@media screen and (max-width:700px){
   .logo{
     padding: 0;
     margin: 30px 0 0 20px;
   }
 }
-/*----------------------------------------------NAVIGUATEUR---Breakpoint: 745px, 700px-------------------------------------------------- */
+/* --Naviguateur-- */
 .menu{
   display: flex;
-  flex-direction: row;
-  margin-left: 10%;
-}
-@media screen and (max-width: 745px){
-  .menu{
-    margin-left: auto;
-  }
+  flex-direction: row;/* --a regler!!-- */
 }
 @media screen and (max-width:700px){
   .menu{
@@ -115,32 +104,72 @@ color: #0065FC;
 h1 {
   font-size: large;
 }
-/*------------------------------------------------------- FORM RECHERCHE--------------------------------------------------------- */
-.flex-form {
+/*------------------------------------- FORM RECHERCHE--breakpoint: 700px: 370px------------------------------------------------ */
+.formulaire{
   display: flex;
   flex-direction: row;
-  width: 425px;
+  justify-content: center;
+  width: 420px;
   height: 50px;
+  border: 2px solid #F2F2F2;
+  border-radius: 20px;
+  margin-bottom: 30px;
 }
-
+@media screen and (max-width:700px){
+  .formulaire{
+    width: 335px;
+  }
+}
 .ville {
-  border: 2px solid;
-  border-color: #F2F2F2;
+  padding: 15px;
+  border: none;
+  width: 235px;
+  height: 50px;
 } 
-.flex-form input[type="submit"]{
+@media screen and (max-width:370px){
+  .ville{
+    width: 100%;
+  }
+}
+.rechercher{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   width: 135px;
   background-color: #0065FC;
-  border: none;
+  border: 2px solid #0065FC;
   border-radius: 0 15px 15px 0 ;
+}
+@media screen and (max-width:700px){
+  .rechercher{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+  }
+}
+.rechercher .fa-search{
+  display: none;
+}
+@media screen and (max-width:700px){
+.rechercher .fa-search{
+    display: initial;
+    position: absolute;
+    color: white;
+  }
+}
+input[type="submit"]{
+  background: 0;
+  border: 0;
   color: white;
   font-size: medium;
   font-weight: bold;
   letter-spacing: 1px;
 }
 @media screen and (max-width:700px){
-  .flex-form input[type="submit"]{
-    /* --changer "rechercher"-- */
+  input[type="submit"]{
     border-radius: 15px;
+    visibility: hidden;
   }
 }
 /* --icon geoposition-- */
@@ -153,7 +182,7 @@ h1 {
 }
 .icone-marker .fa-map-marker{
   font-size: 18px;
-  margin-left: 22px;
+  margin-left: 20px;
   margin-top: 20px;
 }
 /* ---------------------------------------------------------FILTRES--breakpoint: 950px, 700px------------------------------------------------------- */
@@ -172,6 +201,7 @@ h1 {
 }
 .titre-filtres {
   font-size: 20px;
+  margin-right: 30px;
 }
 @media screen and (max-width: 950px){
   .titre-filtres{
@@ -186,7 +216,7 @@ h1 {
   border-radius: 50px;
   border: 3px solid #f2f2f2;
   height: 50px;
-  margin-left: 25px;
+  margin: 0 25px 15px 0;
 }
 .checkbox input{
   display: none;
@@ -268,7 +298,7 @@ input:checked + .rounded{
     margin-bottom: 0px;
   }
 }
-/* ------------------------WRAPPER HEBERGEMENTS -------breakpoint: 1455px ;1425px------------------------------------------------ */
+/* ----------------------------------WRAPPER HEBERGEMENTS ------breakpoint: 1460px ;1425px-------------------------------------- */
 .wrapper-hebergements {
   display: flex;
   flex-wrap: wrap;
@@ -279,7 +309,7 @@ input:checked + .rounded{
   padding: 25px;
   margin-right: 30px;
 }  
-@media screen and (max-width: 1455px){
+@media screen and (max-width: 1460px){
   .wrapper-hebergements{ 
     margin-left: auto;
     margin-right: auto;
@@ -432,6 +462,11 @@ input:checked + .rounded{
     margin: auto auto 15px auto;
   }
 }
+@media screen and (max-width: 350px){
+  .carte-populaire{
+    margin: auto auto 15px auto;
+  }
+}
 /*-- images cartes populaires-- */
 .images-populaires {
   object-fit:cover;
@@ -450,11 +485,12 @@ input:checked + .rounded{
   line-height: 20px;
 }
 /* ------------------------------------WRAPPER2---breakpoint: 1425px; 330px------------------------------------------------------ */
-.wrapper2 {/* regler width */
+.wrapper2 {
   display:grid;
-  grid-template-columns: 350px 350px 350px 350px; /* ------alleger repeat--------------- */
-  grid-template-rows:240px 240px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows:repeat(2, 240px);
   grid-row-gap: 40px;
+  grid-column-gap: 36px;
 }
 @media screen and (max-width: 1425px){
   .wrapper2{
@@ -530,7 +566,7 @@ input:checked + .rounded{
 .carte:hover {
   box-shadow: 1px 2px 5px 1px #deebff
  }
-/*-- images cartes activités !!-- */
+/*-- images cartes activités -- */
 .images-activités-small,
 .images-activités-médium,
 .images-activités-alternative,
