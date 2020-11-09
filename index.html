@@ -14,7 +14,6 @@
 <body>
   <main>  
   <!-- Entête de  page -->
-  <section>
     <header>
       <div class="logo"><img src="logo\Reservia.png" alt="Logo Reservia"width="100"height="40"></div>  
       <!-- Navigateur site -->
@@ -24,7 +23,7 @@
       </ul>
       <div class="inscription"><b><a class="inscription-fictive" href="#">S'Inscrire</a></b></div>
     </header>
-
+    <section>
     <h1>Trouver votre hébérgement pour des vacances de rêves</h1>
     <p>En plein centre ville ou en pleine nature</p>
   <br>
@@ -33,12 +32,15 @@
 
   <!-- barre de recherche -->
       
-  <form class="flex-form" action="traitement.php" method="post" aria-label="formulaire">
-     <div class="icone-marker">
+  <form class="formulaire" action="traitement.php" method="post">
+    <div class="icone-marker">
       <i class="fa fa-map-marker fa-lg" aria-hidden="true" ></i>
-    </div>
-      <input type="search" class="ville"  placeholder="Entrer votre ville">
-      <input type="submit" class="envoyer" value="Rechercher">
+      </div>
+      <input type="search" class="ville" placeholder="Entrer votre ville">
+      <label class="rechercher">
+        <input type="submit" value="Rechercher">
+        <i class="fas fa-search"></i>
+      </label>
   </form> 
 <br>
 
