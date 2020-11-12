@@ -1,7 +1,14 @@
 /* -------------------------color infos: light grey:#f2f2f2; blue:#0065fc ; lightblue:#deebff ----------------------------------- */
-
+@font-face{
+  font-family: 'Raleway';
+  src: url("Raleway/Raleway-Regular.ttf");
+  src: url("Raleway/Raleway-Light.ttf");
+  src: url("Raleway/Raleway-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font-family: Raleway ,sans-serif;
+  font-family: "Raleway" ,sans-serif;
   max-width: 1440px;
   margin: auto;
   display: flex;
@@ -54,7 +61,6 @@ a{
   color: black
 }
 .inscription{
-  margin: 45px 30px 0 30px;
   font-weight: bold;
 }
 .false-inscription{
@@ -96,10 +102,14 @@ h1 {
     border-bottom: 3px solid #0065FC ;
   }
   .inscription{
+    border: 0;
     margin: 0;
     position: absolute;
-    right: 30px;
-    top: 50px;
+    left: 200px;
+    top: 10px;
+  }
+  .inscription:hover{
+    border: 0;
   }
 }
 @media screen and (max-width:380px){
@@ -108,9 +118,6 @@ h1 {
   }
   .inscription{
     left: 230px;
-  }
-  li{
-    padding: 40px 0 10px 25px ;
   }
 }
 /*--------------------------------------- FORM RECHERCHE--breakpoint: 700px; 380px --------------------------------------------------- */
@@ -552,8 +559,8 @@ input:checked + .rounded{
 }
 /* --cartes activités-- */
 .card-activity-small,
-.card-activity-médium-3,
-.card-activity-médium-2,
+.card-activity-medium-3,
+.card-activity-medium-2,
 .card-activity-alternative,
 .card-activity{ 
   display:flex;
@@ -566,11 +573,11 @@ input:checked + .rounded{
 .card-activity-alternative{
   height:240px;
 }
-.card-activity-médium-3,
-.card-activity-médium-2 {
+.card-activity-medium-3,
+.card-activity-medium-2 {
   height:210px;
 }
-.card-activity-médium-3 { 
+.card-activity-medium-3 { 
   margin-top:-40px;
   grid-column: 4 ;
 }
@@ -581,8 +588,8 @@ input:checked + .rounded{
 }
 /*-- hover cartes activités-- */
 .card-activity-small:hover,
-.card-activity-médium-3:hover,
-.card-activity-médium-2:hover,
+.card-activity-medium-3:hover,
+.card-activity-medium-2:hover,
 .alternative:hover,
 .card-popular:hover,
 .card-activity:hover,
@@ -591,7 +598,7 @@ input:checked + .rounded{
  }
 /*-- images cartes activités -- */
 .picture-activity-small,
-.picture-activity-médium,
+.picture-activity-medium,
 .alternative,
 .picture-activity{
   object-fit:cover;
@@ -602,7 +609,7 @@ input:checked + .rounded{
 .alternative{
   height:180px;
 }
-.picture-activity-médium{
+.picture-activity-medium{
   height:150px;
 }
 .picture-activity-small{
@@ -612,7 +619,7 @@ input:checked + .rounded{
 .text-card-name {
   margin-left: 20px;
 }
-.text-card-name-médium {
+.text-card-name-medium {
   margin-left: 20px;
   margin-top: 25px;
 }
@@ -624,26 +631,26 @@ input:checked + .rounded{
     margin-bottom: 50px;
   }
   .card-activity-small,
-  .card-activity-médium-3,
-  .card-activity-médium-2,
+  .card-activity-medium-3,
+  .card-activity-medium-2,
   .card-activity-alternative,
   .card-activity{
     width: 335px;
     height: 200px;
     align-items: center;
   }
-  .card-activity-médium-3{
+  .card-activity-medium-3{
     margin-top: auto;
   }
   .picture-activity-small,
-  .picture-activity-médium,
+  .picture-activity-medium,
   .picture-activity-alternative,
   .picture-activity{
     margin-top: 5px;
     width: 325px;
     height: 135px;
   }
-  .text-card-name-médium {
+  .text-card-name-medium {
     margin-top: 15px;
   }
 }
@@ -656,15 +663,15 @@ input:checked + .rounded{
   .wrapper-2{
     justify-content: center;
   }
-  .card-activity-médium-3,
-  .card-activity-médium-2,
+  .card-activity-medium-3,
+  .card-activity-medium-2,
   .card-activity-small,
   .card-activity-alternative,
   .card-activity{
     width: 280px;
   }
   .picture-activity-small,
-  .picture-activity-médium,
+  .picture-activity-medium,
   .picture-activity-alternative,
   .picture-activity{
     width: 270px;
