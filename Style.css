@@ -27,7 +27,7 @@ section{
     padding: 10px;
   }
 }
-/* ----------------------------------------------HEADER---breakpoint: 700px; 380px---------------------------------------------------- */
+/* -------------------------------------------------HEADER---breakpoint: 700px; 380px ------------------------------------------------ */
 header{
   display: flex;
   justify-content: space-between;
@@ -107,10 +107,13 @@ h1 {
     margin-bottom: auto;
   }
   .inscription{
-    left: 280px;
+    left: 230px;
+  }
+  li{
+    padding: 40px 0 10px 25px ;
   }
 }
-/*--------------------------------------------- FORM RECHERCHE--breakpoint: 700px; 380px---------------------------------------------- */
+/*--------------------------------------- FORM RECHERCHE--breakpoint: 700px; 380px --------------------------------------------------- */
 .search-form{
   display: flex;
   flex-direction: row;
@@ -194,11 +197,21 @@ input[type="submit"]{
 }
 @media screen and (max-width:380px){
   .search-form{
-    max-width: 300px;
+    max-width: 260px;
+  }
+  .icon-marker .fa-map-marker{
+    margin-left: 15px;
   }
   .city{
     padding: 5px;
     font-size: small;
+  }
+  .search .fa-search{
+    right: 0;
+    bottom: 10px;
+  }
+  h1{
+    font-size: larger;
   }
 }
 /* ------------------------------------------------------FILTRES--breakpoint: 950px--------------------------------------------------- */
@@ -207,7 +220,7 @@ input[type="submit"]{
   flex-wrap: wrap;
   align-content: center;
   width: 100%;
-  margin-left: 15px;
+  margin: 30px 0 0 15px;
 }
 .title-filter{
   font-weight: bold;
@@ -368,7 +381,7 @@ input:checked + .rounded{
 /* --texte carte hebergement-- */
 .infos-card{
   width: 100%;
-  margin: 10px 0 0 30px;
+  margin: 10px 0 0 10px;
 }
 .text-card{
   line-height: 20px;
@@ -410,6 +423,12 @@ input:checked + .rounded{
   }
 }
 @media screen and (max-width: 380px){
+  .wrapper-accomodations{
+    justify-content: flex-start;
+  }
+  h2{
+    font-size: larger;
+  }
   .card{
     width: 280px;
   }
@@ -417,7 +436,7 @@ input:checked + .rounded{
     width: 270px;
   }
 }
-/* ----------------------------------ASIDE POPULAIRE---breakpoint: 1430px; 1230px; 950px; 380px--------------------------------------- */
+/* -------------------------------ASIDE POPULAIRE---breakpoint: 1430px; 1230px; 950px; 380px 300px------------------------------------ */
 .wrapper-popular {
   display: flex;
   flex-direction: column;
@@ -427,7 +446,7 @@ input:checked + .rounded{
   background-color: #f2f2f2;
 }
 /* --title-- */
-.title-popular {
+.title-popular{
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -435,22 +454,23 @@ input:checked + .rounded{
   margin-top: 50px;
 }
 /* --cards popular -- */
-.card-popular {
+.card-popular{
   display: flex;
+  flex-direction: row;
   border-radius: 15px;
   width: 345px;
   height: 145px;
   background-color: white;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
   margin: 0 35px 30px 35px;
+  padding: 5px 0 5px 5px;
 }
 /*-- pictures and texts cards-- */
 .popular-picture{
   object-fit:cover;
   background:#0065FC;
-  height: 135px;
+  height: 144px;
   width: 130px;
-  margin: 5px 0 0 5px;
   border-radius: 15px 0 0 15px;
 }
 .infos-card-popular{
@@ -458,7 +478,6 @@ input:checked + .rounded{
   flex-direction: column;
   margin: 20px 0 0 20px;
   width: 150px;
-  height: 120px;
   line-height: 20px;
 }
 @media screen and (max-width: 1430px){
@@ -474,7 +493,7 @@ input:checked + .rounded{
     margin:40px 45px 20px 30px;
   }
   .card-popular{
-    margin: auto;
+    margin: 0 25px 25px;
   }
 }
 @media screen and (max-width:1230px){
@@ -484,22 +503,25 @@ input:checked + .rounded{
 }
 @media screen and (max-width:950px){
   .wrapper-popular{
-    flex-wrap: nowrap;
     border-radius: 0;
     flex-direction: column;
   }
   .title-popular{
-    max-width:335px;
+    max-width:300px;
   }
 }
 @media screen and (max-width: 380px){
+  .title-popular{
+    margin: 40px 0 10px 0;
+    max-width: 270px;
+  }
   .card-popular{
     width: 280px;
     height: 180px;
   }
   .popular-picture{
     width: 130px;
-    height: 170px;
+    height: 180px;
   }
   .infos-card-popular {
     width: 100px;
@@ -507,11 +529,16 @@ input:checked + .rounded{
     margin: 10px 0 0 10px;
   }
   .mid{
-    background-color: lawngreen;
-    padding-bottom: 5px;
+    position: relative;
+    bottom: 20px;
   }
 }
-/* ---------------------------------------WRAPPER-2---breakpoint: 1430px; 700px 380px------------------------------------------------- */
+@media screen and (max-width: 300px){
+  .wrapper-popular{
+    max-width: 300px;
+  }
+}
+/* --------------------------------------WRAPPER-2---breakpoint: 1430px; 700px 380px 300px ------------------------------------------- */
 .wrapper-2 {
   display:grid;
   grid-template-columns: repeat(4, 1fr);
@@ -556,7 +583,7 @@ input:checked + .rounded{
 .card-activity-small:hover,
 .card-activity-médium-3:hover,
 .card-activity-médium-2:hover,
-.card-activity-alternative:hover,
+.alternative:hover,
 .card-popular:hover,
 .card-activity:hover,
 .card:hover{
@@ -565,14 +592,14 @@ input:checked + .rounded{
 /*-- images cartes activités -- */
 .picture-activity-small,
 .picture-activity-médium,
-.picture-activity-alternative,
+.alternative,
 .picture-activity{
   object-fit:cover;
   border-radius: 15px 15px 0 0;
   width:300px;
   height:400px;
 }
-.picture-activity-alternative{
+.alternative{
   height:180px;
 }
 .picture-activity-médium{
@@ -626,11 +653,26 @@ input:checked + .rounded{
   }
 }
 @media screen and (max-width: 380px){
+  .wrapper-2{
+    justify-content: center;
+  }
+  .card-activity-médium-3,
+  .card-activity-médium-2,
+  .card-activity-small,
+  .card-activity-alternative,
   .card-activity{
     width: 280px;
   }
+  .picture-activity-small,
+  .picture-activity-médium,
+  .picture-activity-alternative,
   .picture-activity{
     width: 270px;
+  }
+}
+@media screen and (max-width: 300px){
+  .wrapper-2{
+    max-width: 300px;
   }
 }
 /* ----------------------------------------FOOTER----breakpoint: 950px; 700px; 380px-------------------------------------------------- */
