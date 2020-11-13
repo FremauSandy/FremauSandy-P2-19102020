@@ -91,9 +91,11 @@ h1 {
     width: 100%;
     margin: 60px 0 0 0;
   }
+  .menu .inscription{
+    justify-content: flex-end;
+  }
   li{
     width: 100%;
-    padding: 40px 50px 10px 50px;
     border-bottom: 3px solid  #F2F2F2;
     justify-content: center;
   }
@@ -105,19 +107,11 @@ h1 {
     border: 0;
     margin: 0;
     position: absolute;
-    left: 200px;
+    right: 0px;
     top: 10px;
   }
   .inscription:hover{
     border: 0;
-  }
-}
-@media screen and (max-width:380px){
-  header{
-    margin-bottom: auto;
-  }
-  .inscription{
-    left: 230px;
   }
 }
 /*--------------------------------------- FORM RECHERCHE--breakpoint: 700px; 380px --------------------------------------------------- */
@@ -149,9 +143,6 @@ h1 {
   color: white;
   font-weight: bold;
   font-size: 16px;
-}
-button .text-button{
-  margin-left: 15px;
 }
 .search .fa-search{
   display: none;
@@ -188,9 +179,6 @@ input[type="submit"]{
     display: none;
 }
   .search .fa-search{
-    position: relative;
-    bottom: 2px;
-    right: 8px;
     display: initial;
     color: white;
   }
@@ -430,9 +418,6 @@ input:checked + .rounded{
   }
 }
 @media screen and (max-width: 380px){
-  .wrapper-accomodations{
-    justify-content: flex-start;
-  }
   h2{
     font-size: larger;
   }
@@ -443,7 +428,7 @@ input:checked + .rounded{
     width: 270px;
   }
 }
-/* -------------------------------ASIDE POPULAIRE---breakpoint: 1430px; 1230px; 950px; 380px 300px------------------------------------ */
+/* -------------------------------ASIDE POPULAIRE---breakpoint: 1430px; 1230px; 950px; 380px ----------------------------------------- */
 .wrapper-popular {
   display: flex;
   flex-direction: column;
@@ -540,12 +525,7 @@ input:checked + .rounded{
     bottom: 20px;
   }
 }
-@media screen and (max-width: 300px){
-  .wrapper-popular{
-    max-width: 300px;
-  }
-}
-/* --------------------------------------WRAPPER-2---breakpoint: 1430px; 700px 380px 300px ------------------------------------------- */
+/* --------------------------------------WRAPPER-2---breakpoint: 1430px; 700px 380px  ------------------------------------------------ */
 .wrapper-2 {
   display:grid;
   grid-template-columns: repeat(4, 1fr);
@@ -675,11 +655,6 @@ input:checked + .rounded{
   .picture-activity-alternative,
   .picture-activity{
     width: 270px;
-  }
-}
-@media screen and (max-width: 300px){
-  .wrapper-2{
-    max-width: 300px;
   }
 }
 /* ----------------------------------------FOOTER----breakpoint: 950px; 700px; 380px-------------------------------------------------- */
