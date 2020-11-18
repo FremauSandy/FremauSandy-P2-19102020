@@ -23,7 +23,7 @@ main{
     padding: 0;
   }
   section{
-    padding: 10px;
+    padding-left: 10px;
   }
   .wrapper{
     padding: 0;
@@ -304,6 +304,11 @@ input:checked + .rounded{
   }
   .text-info{
     margin-left: auto;
+  }
+}
+@media screen and (max-width: 700px){
+  .filters{
+    margin: 0px;
   }
 }
 /*-------------------------------------- WRAPPER------breakpoint: 1460px ;1430px; 700px----------------------------------------------- */
@@ -640,6 +645,9 @@ input:checked + .rounded{
   }
 }
 @media screen and (max-width: 700px){
+  .wrapper-2{
+    padding: 0;
+  }
   .title-wrapper-2{
     margin-left:20px;
   }
