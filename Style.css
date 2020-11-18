@@ -23,7 +23,10 @@ main{
     padding: 0;
   }
   section{
-    padding: 20px;
+    padding: 10px;
+  }
+  .wrapper{
+    padding: 0;
   }
 }
 @media screen and (max-width: 380px){
@@ -303,7 +306,7 @@ input:checked + .rounded{
     margin-left: auto;
   }
 }
-/*-------------------------------------- WRAPPER------breakpoint: 1460px ;1430px------------------------------------------------- */
+/*-------------------------------------- WRAPPER------breakpoint: 1460px ;1430px; 700px----------------------------------------------- */
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -326,6 +329,11 @@ input:checked + .rounded{
     border-radius: 0;
     background-color: transparent;
     margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 700px){
+  .wrapper{
+    padding: 0;
   }
 }
 /* ----------------------------------WRAPPER HEBERGEMENTS ------breakpoint: 1460px ;1430px; 380px------------------------------------- */
